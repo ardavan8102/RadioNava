@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:radio_nava/page_handler.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -22,7 +24,9 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     // Navigate to HOME
     Timer(Duration(seconds: 5), () {
-      Navigator.of(context).pushReplacementNamed('/home');
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PageHandler()
+      ));
     });
   }
 
