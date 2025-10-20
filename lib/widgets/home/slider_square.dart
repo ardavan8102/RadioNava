@@ -20,7 +20,7 @@ class SectionSliderSquare extends StatelessWidget {
 
 
     final sliderSections = sections.where((s) {
-      final typeValue = s.type?.toString().toLowerCase() ?? '';
+      final typeValue = s.type.toString().toLowerCase();
       final idValue = s.id.toLowerCase();
       return typeValue.contains('slider_square') &&
           idValue == targetId.toLowerCase();
