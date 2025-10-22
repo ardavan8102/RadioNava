@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:radio_nava/models/data_model.dart';
 import 'package:radio_nava/widgets/home/create_section.dart';
 import 'package:radio_nava/widgets/slider_row/slider_row_fresh_drops.dart';
@@ -42,13 +43,10 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text(
-          'Radio Nava',
-          style: TextStyle(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
+        title: SvgPicture.asset(
+          'assets/svg/RADIONAVA.svg',
+          height: 30,
+          width: 30,
         ),
         centerTitle: true,
         backgroundColor: Colors.black,
