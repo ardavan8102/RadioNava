@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:radio_nava/models/data_model.dart';
 import 'package:radio_nava/widgets/home/create_section.dart';
-import 'package:radio_nava/widgets/home/slider_square.dart';
-import 'package:radio_nava/widgets/home/slider_square_mp3.dart';
+import 'package:radio_nava/widgets/slider_row/slider_row_fresh_drops.dart';
+import 'package:radio_nava/widgets/slider_square/slider_square.dart';
+import 'package:radio_nava/widgets/slider_square/slider_square_djmix.dart';
+import 'package:radio_nava/widgets/slider_square/slider_square_hot_tracks.dart';
+import 'package:radio_nava/widgets/slider_square/slider_square_more_music.dart';
+import 'package:radio_nava/widgets/slider_square/slider_square_mp3.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -77,9 +81,30 @@ class _HomePageState extends State<HomePage> {
                     CreateSectionTitle(sections: sections, targetId: 'top_artists_header', showButton: false),
                     SectionSliderSquare(sections: sections, targetId: 'top_artists_header', targetType: 'artist'),
 
-                    // Section : Hot Release
+                    // Section : Best Release
                     CreateSectionTitle(sections: sections, targetId: 'home_newreleases_header', showButton: false),
-                    SliderSquareMp3(sections: sections, targetId: 'home_newreleases')
+                    SliderSquareMp3(sections: sections, targetId: 'home_newreleases'),
+
+                    // Section : Hot Tracks
+                    CreateSectionTitle(sections: sections, targetId: 'mp3s_header', showButton: false),
+                    SliderSquareHotTracks(sections: sections, targetId: 'mp3s_hottracks'),
+
+                    // Section : Fresh Drops
+                    CreateSectionTitle(sections: sections, targetId: 'home_drops_header', showButton: false),
+                    SliderRowFreshDrops(sections: sections, targetId: 'home_drops', itemCount: 4),
+
+                    // Section: Today's New tracks
+                    CreateSectionTitle(sections: sections, targetId: 'new_playlists_header', showButton: false),
+                    SectionSliderSquare(sections: sections, targetId: 'new_playlists', targetType: 'playlist'),
+
+                    // Section: Dj Mix
+                    CreateSectionTitle(sections: sections, targetId: 'home_djmixes_header', showButton: false),
+                    SliderSquareDjmix(sections: sections, targetId: 'home_djmixes'),
+
+
+                    // Section : More Music
+                    CreateSectionTitle(sections: sections, targetId: 'home_music_header', showButton: false),
+                    SliderSquareMoreMusic(sections: sections, targetId: 'home_music'),
                   ],
                 ),
               ),
