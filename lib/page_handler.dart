@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:radio_nava/views/home.dart';
 
@@ -32,6 +33,7 @@ class _PageHandlerState extends State<PageHandler> {
       body: _pages[_selectedIndex],
 
       bottomNavigationBar: Container(
+        padding: EdgeInsets.symmetric(vertical: 10),
         decoration: const BoxDecoration(
           color: Colors.black,
           border: Border(
@@ -48,19 +50,19 @@ class _PageHandlerState extends State<PageHandler> {
           showUnselectedLabels: true,
           items: const [
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon: Icon(CupertinoIcons.house_fill),
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.search),
+              icon: Icon(CupertinoIcons.music_albums_fill),
               label: 'Browse',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.library_music),
+              icon: Icon(CupertinoIcons.search),
               label: 'Search',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon: Icon(CupertinoIcons.headphones),
               label: 'My Music',
             ),
           ],

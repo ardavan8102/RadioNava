@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:radio_nava/models/data_model.dart';
 import 'package:radio_nava/widgets/home/create_section.dart';
 import 'package:radio_nava/widgets/home/slider_square.dart';
+import 'package:radio_nava/widgets/home/slider_square_mp3.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -75,6 +76,10 @@ class _HomePageState extends State<HomePage> {
                     // Section : Top Artists
                     CreateSectionTitle(sections: sections, targetId: 'top_artists_header', showButton: false),
                     SectionSliderSquare(sections: sections, targetId: 'top_artists_header', targetType: 'artist'),
+
+                    // Section : Hot Release
+                    CreateSectionTitle(sections: sections, targetId: 'home_newreleases_header', showButton: false),
+                    SliderSquareMp3(sections: sections, targetId: 'home_newreleases')
                   ],
                 ),
               ),
